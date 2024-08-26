@@ -10,8 +10,10 @@ QuickSort(arr, left, right) {
 }
 Best Case: When partitions happens in the middle for every array
 Time Complexity - O(nlogn)
+Space Complexity - O(log n) -sc depends on ht of tree
 Worst Case: When partitions happens in the beginning or in the end in sorted array
 Time Complexity - O(n*n)
+Space Complexity - O(n)
 */
 
 var array: [Int] = [22,11,88,66,55,77,33,44]//8
