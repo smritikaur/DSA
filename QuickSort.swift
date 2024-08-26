@@ -8,7 +8,12 @@ QuickSort(arr, left, right) {
     QuickSort(arr, partition_pos+1, right)
    }
 }
+Best Case: When partitions happens in the middle for every array
+Time Complexity - O(nlogn)
+Worst Case: When partitions happens in the beginning or in the end in sorted array
+Time Complexity - O(n*n)
 */
+
 var array: [Int] = [22,11,88,66,55,77,33,44]//8
 class QuickSort {    
     func quickSort(arr: inout [Int], left: Int, right: Int) {
