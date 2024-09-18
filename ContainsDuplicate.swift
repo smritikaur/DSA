@@ -1,4 +1,8 @@
 import Swift
+/*
+LeetCode Problem
+217. Contains Duplicate
+*/
 class ContainsDuplicate {
     func containsDuplicate(_ nums: [Int]) -> Bool {
         //create a hashset

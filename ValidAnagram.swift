@@ -1,4 +1,8 @@
 import Swift
+/*
+LeetCode Problem
+242. Valid Anagram
+*/
 class ValidAnagram {
     func isAnagram(_ s: String, _ t: String) -> Bool {
         //Case1- check if length of two string is equal or not
