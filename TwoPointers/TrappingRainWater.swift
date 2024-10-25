@@ -6,6 +6,7 @@ import Swift
 
 // Solution 1
 // Time Complexity = O(n^2), Space Complexity = O(n)
+/*
 class TrappingRainWater {
     func trap(_ height: [Int]) -> Int {
         var maxHeight = 0
@@ -59,7 +60,40 @@ class TrappingRainWater {
 var trappingRainWaterInator = TrappingRainWater()
 var ans1 = trappingRainWaterInator.trap([5,5,1,7,1,1,5,2,7,6])
 print(ans1)
+*/
+
 
 
 // Solution 2 - Two Pointers (Better)
 // Time Complexity = O(n), Space Complexity = O(1)
+class TrappingRainWater {
+    func trap(_ height: [Int]) -> Int {
+        var leftPointer = 0
+        var rightPointer = height.count - 1
+
+        var leftMax = height[leftPointer]
+        var rightMax = height[rightPointer]
+
+        if height.isEmpty{
+            return 0
+        }
+
+        var res = 0
+        while leftPointer < rightPointer {
+            if leftMax < rightMax {
+                leftPointer += 1
+                leftMax = max(leftMax, height[leftPointer])
+                res += leftMax - height[leftPointer]
+            } 
+            else {
+                rightPointer -= 1
+                rightMax = max(rightMax, height[rightPointer])
+                res += rightMax - height[rightPointer]
+            }
+        }
+        return res
+    }
+}
+var trappingRainWaterInator = TrappingRainWater()
+var ans2 = trappingRainWaterInator.trap([5,5,1,7,1,1,5,2,7,6])
+print(ans2)
